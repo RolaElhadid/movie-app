@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie app</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <!-- *NavBar -------------------->
+    
+    <div class="loading position-fixed  w-100 h-100 top-0 start-0 z-3 ">
+        <span class="loader"></span>
+    </div>
+
+    <nav class="position-fixed top-0 start-0 min-vh-100 text-center" >
+      <div class="nav-logo">
+          <img src="./Movie App/logo.png" class="img-fluid" alt="">
+      </div>
+      <div class="nav-menu"><i class="fa-solid fa-align-justify"></i></div>
+      <div class="nav-social">
+          <i class="fa-solid fa-globe"></i>
+          <i class="fa-solid fa-share-nodes"></i>
+      </div>
+  </nav>
+  <div class="side-nav position-fixed top-0 start-0 vh-100" >
+    <div class="menu">
+        <ul>
+            <li class="opacity-100" onclick="getMovie()"><a href="#home" class="text-decoration-none">Now playing</a></li>
+            <li class="opacity-100" onclick="getPopular()"><a href="#home" class="text-decoration-none">Popular</a></li>
+            <li class="opacity-100" onclick="getTop()"><a href="#home" class="text-decoration-none">Top Rated</a></li>
+            <li class="opacity-100" onclick="getTrend()"><a href="#home" class="text-decoration-none">Trending</a></li>
+            <li class="opacity-100" onclick="getUpcoming()"><a href="#home" class="text-decoration-none">Upcoming</a></li>
+            <li class="opacity-100" ><a href="#contact" class="text-decoration-none">Contact Us</a></li>
+        </ul>
+    </div>
+    <div class="copyrights">
+        <div class="rights-social">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-solid fa-globe"></i></a>
+        </div>
+        <p class="pt-3">Copyright © 2022 All Rights Reserved. <br>Created by <a href="https://github.com/Develekko" class="link-danger fw-bold text-decoration-none" target="_blank">Housam Ramadan</a></p>
+    </div>
+</div>
+     <!-- *Cards -------------------->
+<div class="container py-5" id="home">
+    <input type="text" class="form-control mx-auto rounded-5 searchInput w-50  px-3 border-white bg-transparent text-white" placeholder="Search" aria-label="Username" aria-describedby="basic-addon1">
+    <div class="row mt-3 rowData">
+        
+    </div>
+</div>
+<!-- & Contacts ------------------------>
+ <section id="contact">
+    <div class="container py-5">
+        <h2 class="text-capitalize text-white">contact us</h2>
+        <form>
+            <div class="row mt-3">
+                <div class="col-md-6">
+                    <input id="nameInput"   type="text" class="form-control mt-4  bg-transparent border-0 border-bottom border-white text-white" placeholder="enter your name">
+                    <div class="alert text-danger p-0 m-0 d-none" id="nameAlert">
+                        Invalid Name , only Charchters allowed
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <input id="emailInput"  type="email" class="form-control mt-4  bg-transparent border-0 border-bottom border-white text-white" placeholder="enter your email">
+                    <div class="alert text-danger p-0 m-0 d-none" id="emailAlert">
+                        Invalid Email , try example@domain.com
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <input id="phoneInput"  type="text" class="form-control mt-4  bg-transparent border-0 border-bottom border-white text-white" placeholder="enter your phone">
+                    <div class="alert text-danger p-0 m-0 d-none" id="phoneAlert">
+                        Invalid Phone Number
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <input id="ageInput"  type="number" class="form-control mt-4  bg-transparent border-0 border-bottom border-white text-white" placeholder="enter your age">
+                    <div class="alert text-danger p-0 m-0 d-none" id="ageAlert">
+                       Your age must be over +16
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <input id="PassInput"  type="password" class="form-control mt-4  bg-transparent border-0 border-bottom border-white text-white" placeholder="enter your password">
+                    <div class="alert text-danger p-0 m-0 d-none" id="passAlert">
+                        Password must contain numbers & letters at least 8 characters
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <input id="repassInput"  type="password" class="form-control mt-4  bg-transparent border-0 border-bottom border-white text-white" placeholder="reEnter password">
+                    <div class="alert text-danger p-0 m-0 d-none" id="repassAlert">
+                       Password not match
+                    </div>
+                </div>
+                <div class="col-md-12  mt-4">
+                    <button type="submit" class="form-btn rounded-2 mb-3 ms-0 " disabled >Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+ </section>
+
+<div class="back-to-top ">
+    <a href="#home"><i class="fa-solid fa-arrow-up" onclick="topFunction()"></i></a>
+</div>
+
+
+
+
+<script src="./js/bootstrap.bundle.min.js"></script>
+<script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>
